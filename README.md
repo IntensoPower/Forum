@@ -25,19 +25,22 @@ L'idée du projet `Forum` est de découvrir les différents aspects de l'informa
   + Le `CSS` et son utilisation avec `HTML`
   + Un petit tour chez [Bootstrap](http://getbootstrap.com/)
 
-### 1.2. Mise en place d'un server web `nginx`:
+### 1.2. Tutoriel LINUX:
+
+### 1.3. Mise en place d'un server web `nginx`:
 
   + Installer un server `nginx` et le faire servir une page d'index `index.html`
   + Manipuler quelques paramètres `nginx`:
     * Le concept de `port` (`listen`)
     * Le concept de `routage` (`location`)
 
-### 1.3. Les base de données et le langage `SQL`:
+### 1.4. Les base de données et le langage `SQL`:
   - Pourquoi une base de donnée ?
   - Opérations de bases `CRUD` (create, read, update, delete).
-  - Intégration du la base de donnée pour améliorer le site web 1.1
 
-### 1.4. L'Administration système 2.0:
+### 1.5. Page web plus dynamique:
+
+### 1.5. L'Administration système 2.0:
   - Installation manuelle des logiciels dans un premier temps.
   - Dans un second temps, introduction à l'automatisation avec `ansible`
   - Automatiser la mise à jour du site web et par la suite son installation complète.

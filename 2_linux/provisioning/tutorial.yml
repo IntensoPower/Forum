@@ -1,0 +1,39 @@
+---
+- name: Setup Tutorial
+  hosts: tutorial
+  gather_facts: yes
+
+  tasks:
+    - name: Copie du fichier videogames.txt
+      copy:
+        src: videogames.txt
+        dest: /home/vagrant/videogames.txt
+
+    - name: Crée le dossier /opt/videogames
+      file:
+        state: directory
+        path: /opt/videogames
+        owner: vagrant
+        group: vagrant
+        mode: 0755
+
+    - name: Crée des groupes d'utilisateurs
+      group:
+        state: present
+        name: "{{ item }}"
+      with_items:
+        - nintendo
+        - ps4
+
+    - name: Ajoute des utilisateurs
+      user:
+        state: present
+        name: "{{ item.user }}"
+        shell: /bin/bash
+        group: "{{ item.group }}"
+        append: yes
+      with_items:
+        - { user: mario, group: nintendo }
+        - { user: luigi, group: nintendo }
+        - { user: sonic, group: ps4 }
+        - { user: tails, group: ps4 }
