@@ -12,3 +12,9 @@ cat: lire fichier
 su: change user
 wget: download
 grep: trouver les fichiers contenant une chaîne 
+df -h: Show disk usage
+grep -r: Search recursively for pattern in dir
+chmod octal file: Change the permissions of file to octal, which can be found separately for user, group, and world by adding: 4 – read (r), 2 – write (w), 1 – execute (x)
+Examples:
+chmod 777 – read, write, execute for all
+chmod 755 – rwx for owner, rx for group and world
