@@ -1,0 +1,38 @@
+body
+{
+	background-color: gray;
+}
+
+nav.top
+{
+	display: block;
+	border: 2px solid black;
+	padding: 10px 48% 10px 48%;
+	text-align: left;
+	background: black;
+	border-radius: 1vmin;
+	font-size: 20px;
+	margin-bottom: 3px;
+}
+
+a
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: red;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	color: #B0E0E6;
+}
+
+nav.left
+{
+	background: black;
+	border: 2px solid black;
+	margin-right: 90%;
+	padding: 10px 10px 50% 10px;
+	border-radius: 1vmin;
+}

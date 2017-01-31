@@ -1,0 +1,14 @@
+cd: change directory
+ls: lister repertoire
+rm: suppr fichier
+mkdir: creer dossier
+cp: copier fichier
+mv: deplacer fichier
+ls -h: help for ls
+... | ... : et
+touch: create new file
+ln: lien symbolique
+cat: lire fichier
+su: change user
+wget: download
+grep: trouver les fichiers contenant une chaîne 
