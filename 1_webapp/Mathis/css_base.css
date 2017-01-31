@@ -1,3 +1,4 @@
+/*
 body
 {
 	background-color: gray;
@@ -25,14 +26,27 @@ a
 a:hover
 {
 	text-decoration: underline;
-	color: #B0E0E6;
 }
 
 nav.left
 {
 	background: black;
 	border: 2px solid black;
-	margin-right: 90%;
+	margin-right: 80%;
 	padding: 10px 10px 50% 10px;
+	border-radius: 1vmin;
+}
+*/
+
+li a
+{
+	color: gray;
+	font-weight: bold;
+}
+
+li.liste
+{
+	border: 2px solid gray;
+	background-color: #222;
 	border-radius: 1vmin;
 }
