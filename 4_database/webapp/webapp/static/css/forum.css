@@ -1,0 +1,12 @@
+
+body {
+    padding-top: 70px;
+}
+
+#menu ul li a {
+    color: #ddd;
+}
+
+#menu ul li a:hover {
+    color: #323232 !important;
+}

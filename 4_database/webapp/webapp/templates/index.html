@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS avec BootStrap -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="all" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/forum.css') }}" />
+    </head>
+
+    <body id="top">
+        <!-- Entete du site -->
+        <nav id="menu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-inverse navbar-fixed-top">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img alt="Forum" src="">
+                        </a>
+                    </div>
+                    <li id="menu-home">
+                        <a href="#home">
+                            <span class="glyphicon glyphicon-home"></span>
+                            Accueil
+                        </a>
+                    </li>
+                    <li id="menu-forum">
+                        <a href="#forum">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            Forum
+                        </a>
+                    </li>
+
+                    <li id="menu-about">
+                        <a href="#about">
+                            <span class="glyphicon glyphicon-leaf"></span>
+                            A-propos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br />
+
+        <!-- Corp du site -->
+        <div class="container">
+            <div id="home" class="jumbotron">
+                <h1><span class="glyphicon glyphicon-home"></span> Accueil</h1>
+                <p>
+                    Bienvenue sur <b>Forum</b>!
+                </p>
+            </div>
+
+            <div id="forum" class="jumbotron">
+                <h1><span class="glyphicon glyphicon-comment"></span> Forum</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor, libero quis accumsan fringilla, augue est laoreet orci, consectetur euismod augue nisl sit amet arcu. Fusce ultrices ornare metus in porta. Aenean ac nisl ut tellus dignissim auctor quis id arcu. Vivamus lorem neque, pulvinar non dictum vel, sagittis lobortis odio.
+                </p>
+            </div>
+
+            <div id="about" class="jumbotron">
+                <h1><span class="glyphicon glyphicon-leaf"></span> A-Propos</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor, libero quis accumsan fringilla, augue est laoreet orci, consectetur euismod augue nisl sit amet arcu. Fusce ultrices ornare metus in porta. Aenean ac nisl ut tellus dignissim auctor quis id arcu. Vivamus lorem neque, pulvinar non dictum vel, sagittis lobortis odio.
+                </p>
+            </div>
+
+        </div>
+
+        <hr />
+
+        <!-- Pied de page -->
+        <footer class="container-fluid text-center">
+            <i>
+                <span class="glyphicon glyphicon-copyright-mark"></span>
+                Florian DAMBRINE - 2017
+            </i>
+        </footer>
+        <br />
+    </body>
+</html>
