@@ -2,3 +2,12 @@ sudo apt-get update
 sudo apt-get install nginx
 sudo apt-get install git
 git clone git@github.com:IntensoPower/Forum.git
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="all" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/forum.css') }}" />
+
+
+[('content', u'ovjopevoprfogvbreoj,voprevosgogokostrohtjr'), ('title', u'bgfikgffzfzefez'), ('submit', u'Ajouter le sujet'), ('author', u'fvdfgfvcs')]
+
+[('a', 1), ('b',2)]

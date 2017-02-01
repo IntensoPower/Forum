@@ -1,0 +1,29 @@
+---
+- name: Setup mysql server
+  hosts: mysql
+  gather_facts: yes
+
+  tasks:
+    - name: Install dependencies
+      apt:
+        state: present
+        name: "{{ item }}"
+        update_cache: yes
+      with_items:
+        - mysql-server
+        - python-mysqldb
+
+    - name: Create a new database named forum
+      mysql_db:
+        state: present
+        name: forum
+
+    - name: Create mysql users
+      mysql_user:
+        state: present
+        name: "{{ item.user }}"
+        password: "{{ item.password }}"
+        priv: 'forum.*:ALL,GRANT'
+      with_items:
+        - { user: mathis, password: stage }
+        - { user: florian, password: stage }
