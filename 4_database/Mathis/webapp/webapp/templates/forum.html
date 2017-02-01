@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forum</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css_base.css') }}">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<a href="{{url_for('index')}}" target="_blank" class="navbar-brand"> Index</a>
+		</nav>
+
+		<div class="row">
+  			<div class="col-md-2">
+  				<ul class="nav nav-pills nav-stacked">
+            {% for liste in subjects %}
+  					<li role="presentation" class="liste"><a href="#{{liste.id}}"> {{liste.title}}, Auteur: {{liste.author}} </a></li>
+            {% endfor %}
+            <li role="presentation" class="liste"><a href="{{url_for('add_subject') }}"> Ajouter un sujet</a></li>
+  				</ul>
+  			</div>
+  			<div class="col-md-10">
+        {% for subject in subjects %}
+  				<div class="panel panel-default" id="{{subject.id}}">
+  					<div class="panel-heading">
+  						<h3 class="panel-title">
+  							{{ subject.title }}		
+  						</h3>
+  					</div>
+  					<div class="panel-body">
+  						{{ subject.contenu }}<br>
+  						Auteur: {{ subject.author }}<br>
+  						Date: {{ subject.date }}<br>
+  					</div>
+  				</div>
+        {% endfor %}
+  			</div>
+		</div>
+	</body>
+</html>

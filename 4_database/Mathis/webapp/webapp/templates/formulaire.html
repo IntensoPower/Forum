@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ajouter un sujet
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="{{url_for('add_subject')}}" method="post">
+            <label for="title"> Titre du sujet: </label>
+            <input type="text" name="title" id="title" required="true"><br>
+            <label for="author"> Auteur: </label>
+            <input type="text" name="author" id="author" required="true" value="Invité"><br>
+            <label for="content"> Article:</label>
+            <textarea cols="70" rows="15" name="content" id="content" placeholder="Ecrivez votre article ici." required="true"></textarea><br>
+            <input type="submit" value="Ajouter le sujet" name="submit">
+        </form>
+    </body>
