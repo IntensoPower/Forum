@@ -72,7 +72,7 @@ $ chmod 640
 cd /home/vagrant
 ```
 ```
-$ cd vagrant
+$ cd $HOME
 ```
   
 * Combien de lignes contient le fichier `/home/vagrant/videogames.txt
