@@ -1,7 +1,9 @@
+#
 from flask import Flask
 from flask import render_template, request, redirect, url_for
 
-#import utils
+from utils import select_database, insert_database
+
 app = Flask(__name__)
 
 
@@ -11,16 +13,10 @@ def index():
 
 
 ### Forum 
-subjects = [
-    {'title': 'Les chiens et chats', 'author': 'Mathis', 'date': '30/01/17', 'contenu': 'blabla', 'id':'sujet1' },
-    {'title': 'Les chevaux et poneys', 'author': 'Florian', 'date': '31/01/17', 'contenu': 'blablabla', 'id':'sujet2'},
-    {'title': "Les hamsters et cochons d'Inde", 'author': 'Sam', 'date': '01/02/17', 'contenu': 'bla', 'id':'sujet3'},
-    {'title': 'Les poissons et requins', 'author': 'Gregory', 'date': '02/02/17', 'contenu': 'blablablabla', 'id':'sujet4'}
-]
 
 @app.route('/forums', methods=['GET'])
 def forum():
-    return render_template('forum.html', subjects = subjects)
+    return render_template('forum.html', subjects = select_database())
 
 @app.route('/forums/add', methods=['GET', 'POST'])
 def add_subject():
@@ -34,14 +30,16 @@ def add_subject():
         author = request.form['author']
         content = request.form['content']
 
-        subjects.append(
-            {'title': title, 
-             'author': author, 
-             'date': "01/02/17", 
-             'contenu': content, 
-             'id': "sujet %d" % (len(subjects))
-            }
-        )
+        new_subject = {
+            'title': title, 
+            'author': author, 
+            'writeDate': "01/02/17", 
+            'content': content, 
+            'id': "sujet %d" % (len(select_database()))
+        }
+        
+        insert_database(new_subject)
+
         return redirect(url_for('forum'))
 
     # Appel de la fonction en GET
